@@ -60,8 +60,8 @@ class Welcome extends CI_Controller {
         }
 
         if($result === true){
-            //$this->load->library('Sms');
-            //$status = $this->sms->send($info['name'],$info['phone']);
+            $this->load->library('Sms');
+            $status = $this->sms->send($info['name'],$info['phone']);
             ob_clean();
             exit(json_encode(['code'=>0,'msg'=>'报名成功','data'=>[]],JSON_UNESCAPED_UNICODE));
         }else{

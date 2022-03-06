@@ -1,27 +1,139 @@
-﻿<?php
-$lib_path = __DIR__;
-//载入ucpass类
-require_once($lib_path.'/lib/Ucpaas.class.php');
+<?php
 
-Class Sms {
-    private $appid = "025de9b5ce79407a90bd35c09ead614b";	//应用的ID，可在开发者控制台内的短信产品下查看
-//    private $templateid = "506214";    //可在后台短信产品→选择接入的应用→短信模板-模板ID，查看该模板ID
-    private $templateid = "531805";
-    private $uid = "";
-    private $ucpass;
-    public function __construct()
+/**
+ * Created by Notepad++
+ * User: UCPAAS NickLuo
+ * Date: 2017/11/09
+ * Time: 08:28
+ * Dec : ucpass php sdk
+ */
+class Ucpaas
+{
+    //API请求地址
+    const BaseUrl = "https://open.ucpaas.com/ol/sms/";
+	
+    //开发者账号ID。由32个英文字母和阿拉伯数字组成的开发者账号唯一标识符。
+    private $accountSid;
+
+    //开发者账号TOKEN
+    private $token;
+    
+    public function  __construct($options)
     {
-        //初始化必填
-        //填写在开发者控制台首页上的Account Sid
-        $options['accountsid']='4f3ad4d749acd8c1f57d8bc80c68c1fe';
-        //填写在开发者控制台首页上的Auth Token
-        $options['token']='a64d00e0a1a3b04b002848ad61b0ed3d';
-
-        //初始化 $options必填
-        $this->ucpass = new Ucpaas($options);
+        if (is_array($options) && !empty($options)) {
+            $this->accountSid = isset($options['accountsid']) ? $options['accountsid'] : '';
+            $this->token = isset($options['token']) ? $options['token'] : '';
+        } else {
+            throw new Exception("非法参数");
+        }
     }
 
-    public function send($param, $mobile){
-        return $this->ucpass->SendSms($this->appid, $this->templateid, $param, $mobile, $this->uid);
+    private function getResult($url, $body = null, $method)
+    {
+        $data = $this->connection($url,$body,$method);
+        if (isset($data) && !empty($data)) {
+            $result = $data;
+        } else {
+            $result = '没有返回数据';
+        }
+        return $result;
     }
-}
+
+    /**
+     * @param $url    请求链接
+     * @param $body   post数据
+     * @param $method post或get
+     * @return mixed|string
+     */
+	 
+    private function connection($url, $body,$method)
+    {
+        if (function_exists("curl_init")) {
+            $header = array(
+                'Accept:application/json',
+                'Content-Type:application/json;charset=utf-8',
+            );
+            $ch = curl_init($url);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+            curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
+            if($method == 'post'){
+                curl_setopt($ch,CURLOPT_POST,1);
+                curl_setopt($ch,CURLOPT_POSTFIELDS,$body);
+            }
+            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+            curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+            $result = curl_exec($ch);
+            curl_close($ch);
+        } else {
+            $opts = array();
+            $opts['http'] = array();
+            $headers = array(
+                "method" => strtoupper($method),
+            );
+            $headers[]= 'Accept:application/json';
+            $headers['header'] = array();
+            $headers['header'][]= 'Content-Type:application/json;charset=utf-8';
+
+            if(!empty($body)) {
+                $headers['header'][]= 'Content-Length:'.strlen($body);
+                $headers['content']= $body;
+            }
+
+            $opts['http'] = $headers;
+            $result = file_get_contents($url, false, stream_context_create($opts));
+        }
+        return $result;
+    }
+
+    /**
+	单条发送短信的function，适用于注册/找回密码/认证/操作提醒等单个用户单条短信的发送场景
+     * @param $appid        应用ID
+     * @param $mobile       接收短信的手机号码
+     * @param $templateid   短信模板，可在后台短信产品→选择接入的应用→短信模板-模板ID，查看该模板ID
+     * @param null $param   变量参数，多个参数使用英文逗号隔开（如：param=“a,b,c”）
+     * @param $uid			用于贵司标识短信的参数，按需选填。
+     * @return mixed|string 
+     * @throws Exception
+     */
+    public function SendSms($appid,$templateid,$param=null,$mobile,$uid){
+        $url = self::BaseUrl . 'sendsms';
+        $body_json = array(
+            'sid'=>$this->accountSid,
+            'token'=>$this->token,
+            'appid'=>$appid,
+            'templateid'=>$templateid,
+			'param'=>$param,
+			'mobile'=>$mobile,
+			'uid'=>$uid,
+        );
+        $body = json_encode($body_json);
+        $data = $this->getResult($url, $body,'post');
+        return $data;
+    }
+	
+	 /**
+	 群发送短信的function，适用于运营/告警/批量通知等多用户的发送场景
+     * @param $appid        应用ID
+     * @param $mobileList   接收短信的手机号码，多个号码将用英文逗号隔开，如“18088888888,15055555555,13100000000”
+     * @param $templateid   短信模板，可在后台短信产品→选择接入的应用→短信模板-模板ID，查看该模板ID
+     * @param null $param   变量参数，多个参数使用英文逗号隔开（如：param=“a,b,c”）
+     * @param $uid			用于贵司标识短信的参数，按需选填。
+     * @return mixed|string 
+     * @throws Exception
+     */
+	public function SendSms_Batch($appid,$templateid,$param=null,$mobileList,$uid){
+        $url = self::BaseUrl . 'sendsms_batch';
+        $body_json = array(
+            'sid'=>$this->accountSid,
+            'token'=>$this->token,
+            'appid'=>$appid,
+            'templateid'=>$templateid,
+			'param'=>$param,
+			'mobile'=>$mobileList,
+			'uid'=>$uid,
+        );
+        $body = json_encode($body_json);
+        $data = $this->getResult($url, $body,'post');
+        return $data;
+    }
+} 
