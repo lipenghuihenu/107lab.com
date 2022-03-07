@@ -466,11 +466,11 @@
             </div>
           </div>
           
-          <div class="col-lg-4 col-md-6 portfolio-item filter-system wow fadeInUp" data-wow-delay="0.2s">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-website wow fadeInUp" data-wow-delay="0.2s">
             <div class="portfolio-wrap">
               <figure>
-                <img src="images/ai.png" class="img-fluid" alt="">
-                <a href="images/ai.png" class="link-preview" data-lightbox="portfolio" data-title="人工智能学院" title="Preview"><i class="ion ion-eye"></i></a>
+                <img src="images/ai-800.png" class="img-fluid" alt="">
+                <a href="images/ai-1600.png" class="link-preview" data-lightbox="portfolio" data-title="人工智能学院" title="Preview"><i class="ion ion-eye"></i></a>
                 <a href="http://ai.henu.edu.cn" target="_blank" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
               </figure>
 
@@ -480,11 +480,11 @@
             </div>
           </div>
           
-          <div class="col-lg-4 col-md-6 portfolio-item filter-system wow fadeInUp" data-wow-delay="0.2s">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-website wow fadeInUp" data-wow-delay="0.2s">
             <div class="portfolio-wrap">
               <figure>
-                <img src="images/cwc.png" class="img-fluid" alt="">
-                <a href="images/cwc.png" class="link-preview" data-lightbox="portfolio" data-title="河南大学财务处" title="Preview"><i class="ion ion-eye"></i></a>
+                <img src="images/cwc-800.png" class="img-fluid" alt="">
+                <a href="images/cwc-1600.png" class="link-preview" data-lightbox="portfolio" data-title="河南大学财务处" title="Preview"><i class="ion ion-eye"></i></a>
                 <a href="http://cwc.henu.edu.cn" target="_blank" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
               </figure>
 
@@ -494,11 +494,11 @@
             </div>
           </div>
           
-          <div class="col-lg-4 col-md-6 portfolio-item filter-system wow fadeInUp" data-wow-delay="0.2s">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-website wow fadeInUp" data-wow-delay="0.2s">
             <div class="portfolio-wrap">
               <figure>
-                <img src="images/stbd.png" class="img-fluid" alt="">
-                <a href="images/stbd.png" class="link-preview" data-lightbox="portfolio" data-title="时空大数据产业技术研究院" title="Preview"><i class="ion ion-eye"></i></a>
+                <img src="images/stbd-800.png" class="img-fluid" alt="">
+                <a href="images/stbd-1600.png" class="link-preview" data-lightbox="portfolio" data-title="时空大数据产业技术研究院" title="Preview"><i class="ion ion-eye"></i></a>
                 <a href="http://stbd.henu.edu.cn" target="_blank" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
               </figure>
 
@@ -534,21 +534,21 @@
           </div>
 
           <div class="testimonial-item">
-            <img src="images/lipenghui.jpg" class="testimonial-img" alt="">
-            <h3>李鹏辉</h3>
+            <img src="images/likunsong.jpg" class="testimonial-img" alt="">
+            <h3>李坤松</h3>
             <h4>计算机与信息工程学院学生</h4>
 
           </div>
 
           <div class="testimonial-item">
-            <img src="images/wangyunlong.jpg" class="testimonial-img" alt="">
-            <h3>王云龙</h3>
+            <img src="images/xuechen.jpg" class="testimonial-img" alt="">
+            <h3>薛成</h3>
             <h4>计算机与信息工程学院学生</h4>
           </div>
 
           <div class="testimonial-item">
-            <img src="images/weiyuexin.jpg" class="testimonial-img" alt="">
-            <h3>韦月鑫</h3>
+            <img src="images/guanshunxin.jpg" class="testimonial-img" alt="">
+            <h3>管顺新</h3>
             <h4>计算机与信息工程学院学生</h4>
           </div>
         </div>
@@ -703,7 +703,7 @@
             <div class="contact-qq">
                 <i class="fa fa-qq"></i>
                 <h3>QQ</h3>
-                <p><a href="qq:493284461">493284461</a></p>
+                <p><a href="qq:493284461">1537628435</a></p>
             </div>
         </div>
         </div>
