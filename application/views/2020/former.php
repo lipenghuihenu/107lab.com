@@ -688,14 +688,14 @@
             <div class="contact-phone">
               <i class="fa fa-phone"></i>
               <h3>Phone Number</h3>
-              <p><a href="tel:18236568622">18236568622</a></p>
+              <p><a href="tel:18236568622">14788881636</a></p>
             </div>
           </div>
           <div class="col-md-3">
             <div class="contact-wechat">
               <i class="fa fa-wechat"></i>
               <h3>wechat</h3>
-              <p>18236568622</a></p>
+              <p>14788881636</a></p>
             </div>
           </div>
 
