@@ -465,6 +465,48 @@
               </div>
             </div>
           </div>
+          
+          <div class="col-lg-4 col-md-6 portfolio-item filter-system wow fadeInUp" data-wow-delay="0.2s">
+            <div class="portfolio-wrap">
+              <figure>
+                <img src="images/ai.png" class="img-fluid" alt="">
+                <a href="images/ai.png" class="link-preview" data-lightbox="portfolio" data-title="人工智能学院" title="Preview"><i class="ion ion-eye"></i></a>
+                <a href="http://ai.henu.edu.cn" target="_blank" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+              </figure>
+
+              <div class="portfolio-info">
+                <h4><a href="http://ai.henu.edu.cn" target="_blank">人工智能学院</a></h4>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6 portfolio-item filter-system wow fadeInUp" data-wow-delay="0.2s">
+            <div class="portfolio-wrap">
+              <figure>
+                <img src="images/cwc.png" class="img-fluid" alt="">
+                <a href="images/cwc.png" class="link-preview" data-lightbox="portfolio" data-title="河南大学财务处" title="Preview"><i class="ion ion-eye"></i></a>
+                <a href="http://cwc.henu.edu.cn" target="_blank" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+              </figure>
+
+              <div class="portfolio-info">
+                <h4><a href="http://ai.henu.edu.cn" target="_blank">河南大学财务处</a></h4>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6 portfolio-item filter-system wow fadeInUp" data-wow-delay="0.2s">
+            <div class="portfolio-wrap">
+              <figure>
+                <img src="images/stbd.png" class="img-fluid" alt="">
+                <a href="images/stbd.png" class="link-preview" data-lightbox="portfolio" data-title="时空大数据产业技术研究院" title="Preview"><i class="ion ion-eye"></i></a>
+                <a href="http://stbd.henu.edu.cn" target="_blank" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+              </figure>
+
+              <div class="portfolio-info">
+                <h4><a href="http://stbd.henu.edu.cn" target="_blank">时空大数据产业技术研究院</a></h4>
+              </div>
+            </div>
+          </div>
 
         </div>
 
