@@ -252,7 +252,7 @@
 
           <div class="progress">
             <div class="progress-bar bg-success" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-              <span class="skill">PHP <i class="val">90%</i></span>
+              <span class="skill">JAVA <i class="val">90%</i></span>
             </div>
           </div>
 
@@ -708,40 +708,40 @@
         </div>
         </div>
 
-         <div class="form">
-            <h4 style="margin: 0 auto 20px;width: 280px;">QQ招新群：654969032</h4>
-          <div id="sendmessage">报名成功！</div>
-          <div id="errormessage"></div>
-          <form action="" method="post" role="form" class="contactForm" style="" >
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <input type="text" name="name" class="form-control" id="name" placeholder="姓名" data-rule="minlen:2" data-msg="请输入正确姓名" />
-                <div class="validation"></div>
-              </div>
-              <div class="form-group col-md-6">
-                <input type="text" class="form-control" name="sex" id="gender" placeholder="性别" data-rule="minlen:1" data-msg="请输入你的性别！" />
-                <div class="validation"></div>
-              </div>
-            </div>
-            <div class="form-row">
+        <!-- <div class="form">-->
+        <!--    <h4 style="margin: 0 auto 20px;width: 280px;">QQ招新群：654969032</h4>-->
+        <!--  <div id="sendmessage">报名成功！</div>-->
+        <!--  <div id="errormessage"></div>-->
+        <!--  <form action="" method="post" role="form" class="contactForm" style="" >-->
+        <!--    <div class="form-row">-->
+        <!--      <div class="form-group col-md-6">-->
+        <!--        <input type="text" name="name" class="form-control" id="name" placeholder="姓名" data-rule="minlen:2" data-msg="请输入正确姓名" />-->
+        <!--        <div class="validation"></div>-->
+        <!--      </div>-->
+        <!--      <div class="form-group col-md-6">-->
+        <!--        <input type="text" class="form-control" name="sex" id="gender" placeholder="性别" data-rule="minlen:1" data-msg="请输入你的性别！" />-->
+        <!--        <div class="validation"></div>-->
+        <!--      </div>-->
+        <!--    </div>-->
+        <!--    <div class="form-row">-->
         
-              <div class="form-group col-md-6">
-                  <input type="text" class="form-control" name="phone" id="phone" placeholder="手机号码" data-rule="phone" data-msg="请输入正确的手机号码" />
-                  <div class="validation"></div>
-              </div>
-                <div class="form-group col-md-6">
-                  <input type="text" class="form-control" name="class" id="subject" placeholder="班级 例：21-1" data-rule="minlen:4" data-msg="请输入正确的所在班级" />
-                  <div class="validation"></div>
-                </div>
+        <!--      <div class="form-group col-md-6">-->
+        <!--          <input type="text" class="form-control" name="phone" id="phone" placeholder="手机号码" data-rule="phone" data-msg="请输入正确的手机号码" />-->
+        <!--          <div class="validation"></div>-->
+        <!--      </div>-->
+        <!--        <div class="form-group col-md-6">-->
+        <!--          <input type="text" class="form-control" name="class" id="subject" placeholder="班级 例：21-1" data-rule="minlen:4" data-msg="请输入正确的所在班级" />-->
+        <!--          <div class="validation"></div>-->
+        <!--        </div>-->
         
-            </div>
-            <div class="form-group">
-              <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="请介绍一下你自己" placeholder="介绍一下你自己吧...."></textarea>
-              <div class="validation"></div>
-            </div>
-            <div class="text-center"><button type="submit">提交报名</button></div>
-          </form>
-        </div>
+        <!--    </div>-->
+        <!--    <div class="form-group">-->
+        <!--      <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="请介绍一下你自己" placeholder="介绍一下你自己吧...."></textarea>-->
+        <!--      <div class="validation"></div>-->
+        <!--    </div>-->
+        <!--    <div class="text-center"><button type="submit">提交报名</button></div>-->
+        <!--  </form>-->
+        <!--</div>-->
 
       </div>
     </section><!-- #contact -->
